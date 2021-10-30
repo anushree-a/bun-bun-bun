@@ -43,7 +43,7 @@
 .bun-extra-info {
     font-size: 14px;
     margin: 0;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .total-amount {
@@ -82,4 +82,11 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.remove-item-link {
+    text-decoration: underline;
+    font-size: 12px;
+    margin: 4px 0;
+    cursor: pointer;
 }

@@ -25,6 +25,7 @@ const populateBagItems = () => {
 
             const itemRemoveLink = document.createElement("a");
             itemRemoveLink.innerHTML = 'Delete Item'
+            itemRemoveLink.classList.add("remove-item-link")
             itemRemoveLink.onclick = onRemoveItem.bind(this, item);
 
             const individualBunDetailsEl = document.createElement("div");
