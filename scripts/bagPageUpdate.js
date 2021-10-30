@@ -6,7 +6,7 @@ const populateBagItems = () => {
     const bagContentEl = document.getElementById("a6-bag-content")
     let totalPrice = 0;
 
-    if (bagContent) {
+    if (bagContent.length) {
         bagContent.forEach((item) => {
             const selectedItemParentDivEl = document.createElement("div");
             selectedItemParentDivEl.classList.add("bun-selections")
