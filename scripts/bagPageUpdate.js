@@ -23,10 +23,15 @@ const populateBagItems = () => {
             selectedItemDetailsEl.classList.add("bun-extra-info")
             selectedItemDetailsEl.innerHTML = 'Quantity: ' + item.qtyString + ' • Glaze: ' + item.glaze
 
+            const itemRemoveLink = document.createElement("a");
+            itemRemoveLink.innerHTML = 'Delete Item'
+            itemRemoveLink.onclick = onRemoveItem.bind(this, item);
+
             const individualBunDetailsEl = document.createElement("div");
             individualBunDetailsEl.classList.add("individual-bun-details");
             individualBunDetailsEl.appendChild(selectedItemTitleEl);
             individualBunDetailsEl.appendChild(selectedItemDetailsEl);
+            individualBunDetailsEl.appendChild(itemRemoveLink);
 
             const selectedItemPriceBreakup = document.createElement("div");
             selectedItemPriceBreakup.classList.add("bun-price")
@@ -56,4 +61,12 @@ const populateBagItems = () => {
     else {
         proceedToPaymentBtnEl.classList.add("proceed-to-payment-btn-inactive")
     }
+}
+
+// Handles removal of item from bag
+const onRemoveItem = (selectedItem) => {
+    const currentBagContent = JSON.parse(window.localStorage.getItem('bagContent'))
+    const newBagContent = currentBagContent.filter((item) => item.type !== selectedItem.type)
+    window.localStorage.setItem('bagContent', JSON.stringify(newBagContent));
+    location.reload();
 }
