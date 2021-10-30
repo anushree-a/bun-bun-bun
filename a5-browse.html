@@ -1,0 +1,169 @@
+<!-- Menu page for the Bun Bun Bakehshop via which user can browse different bun options -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BunBun - Menu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/a5-global.css">
+    <link rel="stylesheet" href="styles/a5-navbar.css">
+    <link rel="stylesheet" href="styles/a5-browse.css">
+    <link rel="stylesheet" href="styles/a5-footer.css">
+</head>
+
+<body>
+    <nav class="a5-navbar">
+        <div class="a5-logo">
+            <a href="index.html" class="a5-logo">
+                <img src="./assets/LOGO.png" alt="BunBun Logo" width="90" class="nav-logo-img" />
+            </a>
+        </div>
+        <div>
+            <ul class="a5-nav-links">
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-browse.html">Menu</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-about.html">About</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a6-bag.html"><img src="./assets/bag.png"
+                            alt="Bag Logo" width="24" class="nav-logo-img" /><span id="bag-count"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="a5-browse-main">
+        <h1 class="a5-browse-menu-title">Menu</h1>
+        <p class="a5-browse-menu-oneliner">Choose from a variety of lip-smacking cinnamon rolls that cater to every need
+            and sugar craving. We promise
+            that we’ve got something on the menu for everyone!</p>
+        <div class="a5-bun-option-list">
+            <div class="a5-bun-option-row">
+                <div class="a5-bun-option">
+                    <a href="a5-details-available.html" class="a5-bun-option-card-link"
+                        onclick="onClickOriginalBunCard()">
+                        <div class="a5-bun-option-card">
+                            <img class="a5-bun-image" src="./assets/bun8.jpeg" alt="Image of Original Bun">
+                        </div>
+                        <div class="a5-bun-info">
+                            <span class="a5-bun-availability">5 buns left!</span>
+                            <span class="a5-bun-price">$2</span>
+                        </div>
+                        <h3 class="a5-bun-name">Original</h3>
+                    </a>
+                </div>
+
+                <div class="a5-bun-option">
+                    <a href="a5-details-available.html" class="a5-bun-option-card-link"
+                        onclick="onClickPumpkinSpiceBunCard()">
+                        <div class="a5-bun-option-card">
+                            <div class="a5-bun-option-card">
+                                <img class="a5-bun-image" src="./assets/bun5.jpeg" alt="Image of Pumpkin Spice Bun">
+                            </div>
+                            <div class="a5-bun-info">
+                                <span class="a5-bun-availability">8 buns left!</span>
+                                <span class="a5-bun-price">$4</span>
+                            </div>
+                            <h3 class="a5-bun-name">Pumpkin Spice</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="a5-bun-option-row">
+                <div class="a5-bun-option">
+                    <a href="a5-details-out-of-stock.html" class="a5-bun-option-card-link"
+                        onclick="onClickWalnutBunCard()">
+                        <div class="a5-bun-option-card">
+                            <img class="a5-bun-image" src="./assets/bun6.jpeg" alt="Image of Walnut Bun">
+                        </div>
+                        <div class="a5-bun-info">
+                            <span class="a5-bun-out-of-stock">Out of stock!</span>
+                            <span class="a5-bun-price">$5.50</span>
+                        </div>
+                        <h3 class="a5-bun-name">Walnut</h3>
+                    </a>
+                </div>
+
+                <div class="a5-bun-option">
+                    <a href="a5-details-available.html" class="a5-bun-option-card-link"
+                        onclick="onClickGlutenFreeBunCard()">
+                        <div class="a5-bun-option-card">
+                            <img class="a5-bun-image" src="./assets/bun1.jpeg"
+                                alt="Image of Original (Gluten Free) Bun">
+                        </div>
+                        <div class="a5-bun-info">
+                            <span class="a5-bun-availability">4 buns left!</span>
+                            <span class="a5-bun-price">$6</span>
+                        </div>
+                        <h3 class="a5-bun-name">Original (gluten free)</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="a5-bun-option-row">
+                <div class="a5-bun-option">
+                    <a href="a5-details-available.html" class="a5-bun-option-card-link"
+                        onclick="onClickBlackberryBunCard()">
+                        <div class="a5-bun-option-card">
+                            <img class="a5-bun-image" src="./assets/bun9.jpeg" alt="Image of Blackberry Bun">
+                        </div>
+                        <div class="a5-bun-info">
+                            <span class="a5-bun-availability">12 buns left!</span>
+                            <span class="a5-bun-price">$8</span>
+                        </div>
+                        <h3 class="a5-bun-name">Blackberry</h3>
+                    </a>
+                </div>
+
+                <div class="a5-bun-option">
+                    <a href="a5-details-out-of-stock.html" class="a5-bun-option-card-link"
+                        onclick="onClickCaramelBunCard()">
+                        <div class="a5-bun-option-card">
+                            <img class="a5-bun-image" src="./assets/bun4.jpeg" alt="Image of Caramel Pecan Bun">
+                        </div>
+                        <div class="a5-bun-info">
+                            <span class="a5-bun-out-of-stock">Out of stock!</span>
+                            <span class="a5-bun-price">$12</span>
+                        </div>
+                        <h3 class="a5-bun-name">Caramel Pecan</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="a5-footer">
+        <div class="a5-socials">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/instagram_logo.png" alt="Instagram Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/facebook_logo.png" alt="Facebook Logo" width="24" class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/pinterest_logo.png" alt="Pinterest Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="a5-footer-misc-links">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="a5-contact.html">Contact
+                        Us</a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts/detailsPageUpdate.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+</body>
+
+</html>

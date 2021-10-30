@@ -1,0 +1,40 @@
+/* Stylesheet for common footer used all over the BunBun website */
+.a5-footer {
+    display: flex;
+    padding: 2% 14%;
+    font-size: 18px;
+}
+
+.a5-socials {
+    flex: 1;
+}
+
+.a5-footer-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.a5-footer-link {
+    text-decoration: none;
+    color: #000000
+}
+
+.a5-footer-social-link {
+    margin-right: 40px;
+}
+
+.a5-footer-misc-links {
+    list-style: none;
+    display: flex;
+}
+
+.a5-footer-misc-link {
+    margin-left: 40px;
+}
+
+.a5-footer-link:hover {
+    color: #E4B267;
+    font-weight: 500;
+}

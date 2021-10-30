@@ -1,0 +1,84 @@
+<!-- Main landing page for the website of Bun Bun Bakeshop -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BunBun - Bag</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/a5-global.css">
+    <link rel="stylesheet" href="styles/a5-navbar.css">
+    <link rel="stylesheet" href="styles/a6-bag.css">
+    <link rel="stylesheet" href="styles/a5-footer.css">
+</head>
+
+<body onload="populateBagItems()">
+    <nav class="a5-navbar">
+        <div class="a5-logo">
+            <a href="./index.html" class="a5-logo">
+                <img src="./assets/LOGO.png" alt="BunBun Logo" width="90" class="nav-logo-img" />
+            </a>
+        </div>
+        <div>
+            <ul class="a5-nav-links">
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-browse.html">Menu</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-about.html">About</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a6-bag.html"><img src="./assets/bag.png"
+                            alt="Bag Logo" width="24" class="nav-logo-img" /><span id="bag-count"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="a6-bag-main">
+        <h1 class="a6-bag-main-title">Selected Items</h1>
+        <p class="a6-bag-oneliner">Items that you added to your bag:</p>
+        <div class="a6-bag-content" id="a6-bag-content">
+            <div class="bun-selections">
+            </div>
+        </div>
+        <div class="total-amount">
+            <h4 class="total-amount-label">Total</h4>
+            <h4 class="total-amount-value" id="total-amount-value"></h4>
+        </div>
+        <div id="proceed-to-payment-btn">Proceed to payment</div>
+    </main>
+    <footer class="a5-footer sticky-footer">
+        <div class="a5-socials">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/instagram_logo.png" alt="Instagram Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/facebook_logo.png" alt="Facebook Logo" width="24" class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/pinterest_logo.png" alt="Pinterest Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="a5-footer-misc-links">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="a5-contact.html">Contact
+                        Us</a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/bagPageUpdate.js" defer></script>
+</body>
+
+</html>

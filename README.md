@@ -1,1 +1,0 @@
-# homework_6b

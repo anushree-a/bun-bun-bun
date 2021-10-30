@@ -1,0 +1,93 @@
+<!-- Contact Us Page for Bun Bun Bakeshop -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BunBun - Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/a5-global.css">
+    <link rel="stylesheet" href="styles/a5-navbar.css">
+    <link rel="stylesheet" href="styles/a5-contact.css">
+    <link rel="stylesheet" href="styles/a5-footer.css">
+</head>
+
+<body>
+    <nav class="a5-navbar">
+        <div class="a5-logo">
+            <a href="index.html" class="a5-logo">
+                <img src="./assets/LOGO.png" alt="BunBun Logo" width="90" class="nav-logo-img" />
+            </a>
+        </div>
+        <div>
+            <ul class="a5-nav-links">
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-browse.html">Menu</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-about.html">About</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a6-bag.html"><img src="./assets/bag.png"
+                            alt="Bag Logo" width="24" class="nav-logo-img" /><span id="bag-count"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="a5-contact-main">
+        <h1 class="a5-contact-title">Contact Us</h1>
+        <p class="a5-contact-oneliner">You can call us on <em>(412) 268-2000</em>. Our working hours are 9AM - 8PM from
+            Monday -
+            Saturday. </p>
+        <p class="a5-contact-oneliner">Alternatively, you can also drop us a message using the form below. Expect to see
+            replies in your email inbox during working hours. </p>
+        <form class="a5-contact-form">
+            <label class="a5-contact-form-label" for="name">Name</label>
+            <input type="text" class="a5-contact-form-field" placeholder="Enter your name here" id="name" name="name"
+                required>
+            <label class="a5-contact-form-label" for="email">Email ID</label>
+            <input type="email" class="a5-contact-form-field" placeholder="Enter your email here" id="email"
+                name="email" required>
+            <label class="a5-contact-form-label" for="title">Message Title</label>
+            <input type="text" class="a5-contact-form-field" placeholder="Enter message title here" id="title"
+                name="title" required>
+            <label class="a5-contact-form-label" for="message">Message Body</label>
+            <textarea id="message" class="a5-contact-form-textarea" placeholder="Enter message here" name="message"
+                rows="4" cols="50"></textarea>
+            <input type="submit" class="a5-contact-submit-btn" value="Submit">
+        </form>
+    </main>
+    <footer class="a5-footer">
+        <div class="a5-socials">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/instagram_logo.png" alt="Instagram Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/facebook_logo.png" alt="Facebook Logo" width="24" class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/pinterest_logo.png" alt="Pinterest Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="a5-footer-misc-links">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="a5-contact.html">Contact
+                        Us</a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts/main.js" defer></script>
+</body>
+
+</html>

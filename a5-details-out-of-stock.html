@@ -1,0 +1,148 @@
+<!-- Product details page for an out of stock item -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Original Bun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/a5-global.css">
+    <link rel="stylesheet" href="styles/a5-navbar.css">
+    <link rel="stylesheet" href="styles/a5-footer.css">
+    <link rel="stylesheet" href="styles/a5-details.css">
+</head>
+
+<body onload="onLoadDetailsPage()">
+    <nav class="a5-navbar">
+        <div class="a5-logo">
+            <a href="index.html" class="a5-logo">
+                <img src="./assets/LOGO.png" alt="BunBun Logo" width="90" class="nav-logo-img" />
+            </a>
+        </div>
+        <div>
+            <ul class="a5-nav-links">
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-browse.html">Menu</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a5-about.html">About</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="a5-nav-link" href="./a6-bag.html"><img src="./assets/bag.png"
+                            alt="Bag Logo" width="24" class="nav-logo-img" /><span id="bag-count"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="a5-details-main">
+        <a href="./a5-browse.html" class="a5-details-back-link">˂ Back to Menu</a>
+        <h1 class="a5-details-title" id="a5-details-title"></h1>
+        <p class="a5-details-oneliner" id="a5-details-oneliner"></p>
+        <div class="a5-details-bun-description">
+            <img class="a5-details-bun-image" id="a5-details-bun-image" alt="Image of the bun">
+            <div class="a5-details-bun-info">
+                <p class="a5-details-bun-out-of-stock">Out of stock!</p>
+                <div class="a5-details-bun-detail">
+                    <p class="a5-details-bun-detail-title">Price</p>
+                    <p class="a5-details-bun-detail-value" id="a5-details-bun-detail-value"></p>
+                </div>
+                <div class="a5-details-bun-detail">
+                    <p class="a5-details-bun-detail-title">Quantity</p>
+                    <select class="a5-details-bun-detail-value a5-details-bun-detail-dd" name="a5-bun-quantity"
+                        id="a5-bun-quantity" onchange="onSelectQuantity(this)">
+                        <option value="1">1 piece</option>
+                        <option value="3">3 pieces</option>
+                        <option value="6">6 pieces</option>
+                        <option value="12">12 pieces</option>
+                    </select>
+                </div>
+                <div class="a5-details-bun-detail">
+                    <p class="a5-details-bun-detail-title">Glaze (no added cost)</p>
+                    <select class="a5-details-bun-detail-value a5-details-bun-detail-dd" name="a5-bun-quantity"
+                        id="a5-bun-glaze">
+                        <option value="a5-bun-qty1">None</option>
+                        <option value="a5-bun-qty3">Sugar-milk</option>
+                        <option value="a5-bun-qty6">Vanilla-milk</option>
+                        <option value="a5-bun-qty12">Double-chocolate</option>
+                    </select>
+                </div>
+                <div class="a5-details-add-to-bag-out-of-stock">Add to bag</div>
+                <div class="a5-details-schedule-order">Want to order buns for a later date? <a href="">Schedule
+                        an order</a></div>
+            </div>
+        </div>
+        <div class="a5-details-bun-extra-info">
+            <div class="a5-details-bun-extra-info-row">
+                <h2 class="a5-details-bun-extra-info-title">Ingredients</h2>
+                <img class="a5-details-down-arrow" src="./assets/down-arrow.png" alt="Down arrow icon">
+            </div>
+            <div class="a5-details-bun-extra-info-row">
+                <h2 class="a5-details-bun-extra-info-title">Storage Info</h2>
+                <img class="a5-details-down-arrow" src="./assets/down-arrow.png" alt="Down arrow icon">
+            </div>
+            <div class="a5-details-bun-bestsellers">
+                <h2 class="a5-details-bun-extra-info-title">Our Bestsellers</h2>
+                <p>Because why stop at only one variety? Here are some of our most popular varieties that you must try!
+                    We promise you won’t regret it.</p>
+                <div class="a5-bun-option-list">
+                    <div class="a5-bun-option-row">
+                        <div class="a5-bun-option">
+                            <div class="a5-bun-option-card">
+                                <img class="a5-bun-image" src="./assets/bun8.jpeg" alt="Image of Original bun">
+                            </div>
+                            <div class="a5-bun-info">
+                                <span class="a5-bun-availability">5 buns left!</span>
+                                <span class="a5-bun-price">$2</span>
+                            </div>
+                            <h3 class="a5-bun-name">Original</h3>
+                        </div>
+                    </div>
+                    <div class="a5-bun-option-row">
+                        <div class="a5-bun-option">
+                            <div class="a5-bun-option-card">
+                                <img class="a5-bun-image" src="./assets/bun9.jpeg" alt="Image of Walnut bun">
+                            </div>
+                            <div class="a5-bun-info">
+                                <span class="a5-bun-availability">12 buns left!</span>
+                                <span class="a5-bun-price">$8</span>
+                            </div>
+                            <h3 class="a5-bun-name">Blackberry</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="a5-footer">
+        <div class="a5-socials">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/instagram_logo.png" alt="Instagram Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/facebook_logo.png" alt="Facebook Logo" width="24" class="nav-logo-img" /></a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-social-link" href="#"><img
+                            src="./assets/pinterest_logo.png" alt="Pinterest Logo" width="24"
+                            class="nav-logo-img" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="a5-footer-misc-links">
+            <ul class="a5-footer-links">
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="a5-contact.html">Contact
+                        Us</a>
+                </li>
+                <li class="footer-item"><a class="a5-footer-link a5-footer-misc-link" href="#">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./scripts/detailsPageUpdate.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+</body>
+
+</html>

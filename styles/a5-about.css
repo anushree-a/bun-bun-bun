@@ -1,0 +1,52 @@
+/* Stylesheet for about page */
+
+.a5-about-main {
+    padding: 2% 14%;
+}
+
+.a5-about-title {
+    font-size: 50px;
+    margin: 0px;
+}
+
+.a5-about-founders {
+    display: flex;
+    padding-top: 20px;
+}
+
+.a5-about-founder {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.a5-about-rita {
+    margin-right: 10px;
+}
+
+.a5-about-sujay {
+    margin-left: 10px;
+}
+
+.a5-about-founder-img {
+    height: 300px;
+}
+
+.a5-about-story {
+    display: flex;
+}
+
+.a5-about-story-description {
+    flex: 1;
+}
+
+.a5-about-story-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.a5-about-story-image {
+    width: 280px;
+    margin-left: 40px;
+    margin-top: 20px;
+}

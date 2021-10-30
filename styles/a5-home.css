@@ -1,0 +1,90 @@
+/* Stylesheet for homepage of the BunBun website */
+
+.a5-landing-cover {
+    background-image: url("../assets/cover-image.png");
+    height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.a5-landing-cover-body {
+    padding: 20px;
+    background-color: #fff;
+    width: 400px;
+    border: 1px solid #C4C4C4;
+    margin: 20px auto;
+    width: 40%;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.a5-landing-cover-body-headline {
+    font-size: 20px;
+}
+
+.a5-landing-cover-body-menu-btn {
+    text-decoration: none;
+    color: #000;
+}
+
+.a5-landing-cover-body-menu-btn-content {
+    padding: 12px;
+    background-color: #E4B267;
+    margin: 20px 80px;
+}
+
+.a5-landing-cover-body-menu-btn-content:hover {
+    background-color: #f0bc6d;
+}
+
+
+.a5-customer-reviews-title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.a5-customer-reviews {
+    padding: 2% 14%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.a5-customer-reviews-header {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.a5-review-row {
+    width: 50%;
+}
+
+.a5-awards {
+    padding: 0 14%;
+    display: flex;
+}
+
+.a5-awards-row {
+    width: 50%;
+}
+
+.a5-award {
+    display: flex;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+.a5-award_logo {
+    width: 80px;
+    padding-right: 20px;
+}
+
+.a5-review {
+    margin: 20px;
+    margin-left: 0px;
+}

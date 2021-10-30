@@ -1,0 +1,11 @@
+/* Common stylesheet for all pages in the Bun Bun website */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
