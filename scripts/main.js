@@ -40,3 +40,17 @@ const updateBagCount = (count) => {
 }
 
 updateBagCount(JSON.parse(window.localStorage.getItem('bagContent'))?.length || 0)
+
+onAddToFavorites = () => {
+    const selectedBunType = JSON.parse(window.localStorage.getItem("currentPageDetails")).name
+
+    const itemAddedToFavorite = {
+        "type": selectedBunType,
+        "image": JSON.parse(window.localStorage.getItem("currentPageDetails")).imagePath,
+        "url": window.location.href
+    }
+
+    const currentFavoritesList = JSON.parse(window.localStorage.getItem('favorites')) || [];
+    const newFavoritesList = [...currentFavoritesList, itemAddedToFavorite]
+    window.localStorage.setItem('favorites', JSON.stringify(newFavoritesList));
+}
