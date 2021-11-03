@@ -38,12 +38,14 @@
     font-size: 24px;
     color: #4D843A;
     margin: 0px;
+    flex: 1;
 }
 
 .a5-details-bun-out-of-stock {
     font-size: 24px;
     color: #FF0303;
     margin: 0px;
+    flex: 1;
 }
 
 .a5-details-bun-detail {
@@ -179,4 +181,8 @@
         bottom: 80px;
         opacity: 1;
     }
+}
+
+.a6-details-bun-extra-initial-info {
+    display: flex;
 }
