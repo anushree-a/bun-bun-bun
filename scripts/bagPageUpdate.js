@@ -1,7 +1,7 @@
 // Dynamically injects content into bag page based on
 // user selections
 const populateBagItems = () => {
-    const bagContent = JSON.parse(window.localStorage.getItem('bagContent')) || []
+    const bagContent = JSON.parse(window.localStorage.getItem('bagContent')) || [];
 
     const bagContentEl = document.getElementById("a6-bag-content")
     let totalPrice = 0;
@@ -65,7 +65,7 @@ const populateBagItems = () => {
 }
 
 const populateFavoritesList = () => {
-    const favoritesList = JSON.parse(window.localStorage.getItem('favorites'))
+    const favoritesList = JSON.parse(window.localStorage.getItem('favorites')) || [];
 
     const favoritesEl = document.getElementById("favorites-list")
 
@@ -92,7 +92,7 @@ const populateFavoritesList = () => {
     else {
         const noFavoritesMessageEl = document.createElement("p");
         noFavoritesMessageEl.innerHTML = "No items in favorites yet!"
-        bagContentEl.appendChild(noFavoritesMessageEl)
+        favoritesEl.appendChild(noFavoritesMessageEl)
     }
 }
 

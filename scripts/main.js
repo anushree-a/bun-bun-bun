@@ -51,6 +51,8 @@ onAddToFavorites = () => {
     }
 
     const currentFavoritesList = JSON.parse(window.localStorage.getItem('favorites')) || [];
-    const newFavoritesList = [...currentFavoritesList, itemAddedToFavorite]
-    window.localStorage.setItem('favorites', JSON.stringify(newFavoritesList));
+    if (!currentFavoritesList.some((item) => item.type === itemAddedToFavorite.type)) {
+        const newFavoritesList = [...currentFavoritesList, itemAddedToFavorite]
+        window.localStorage.setItem('favorites', JSON.stringify(newFavoritesList));
+    }
 }
