@@ -1,7 +1,7 @@
 // Dynamically injects content into bag page based on
 // user selections
 const populateBagItems = () => {
-    const bagContent = JSON.parse(window.localStorage.getItem('bagContent'))
+    const bagContent = JSON.parse(window.localStorage.getItem('bagContent')) || []
 
     const bagContentEl = document.getElementById("a6-bag-content")
     let totalPrice = 0;
