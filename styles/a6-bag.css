@@ -111,3 +111,8 @@
 .favorite-item-link {
     color: #000;
 }
+
+.favorite-item-link:hover {
+    color: #E4B267;
+    font-weight: 500;
+}
