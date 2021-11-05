@@ -19,11 +19,11 @@ const addItemToBag = () => {
     window.localStorage.setItem('bagContent', JSON.stringify(newBagContent));
 
     updateBagCount(JSON.parse(window.localStorage.getItem('bagContent')).length)
-    showToast()
+    showAddedToBagToast()
 }
 
-// Handles toast popup action
-const showToast = () => {
+// Handles toast popup action when item added to bag
+const showAddedToBagToast = () => {
     const toastEl = document.createElement('div')
     toastEl.classList.add('item-added-toast-msg');
     toastEl.innerHTML = "Added to bag!"
@@ -55,4 +55,16 @@ onAddToFavorites = () => {
         const newFavoritesList = [...currentFavoritesList, itemAddedToFavorite]
         window.localStorage.setItem('favorites', JSON.stringify(newFavoritesList));
     }
+    showAddedToFavoritesToast();
+}
+
+// Handles toast popup action when item added to favorites
+const showAddedToFavoritesToast = () => {
+    const toastEl = document.createElement('div')
+    toastEl.classList.add('item-added-toast-msg');
+    toastEl.innerHTML = "Added to favorites!"
+    setTimeout(function () {
+        toastEl.remove()
+    }, 4000);
+    document.body.appendChild(toastEl);
 }
