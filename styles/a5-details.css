@@ -186,3 +186,7 @@
 .a6-details-bun-extra-initial-info {
     display: flex;
 }
+
+.add-to-favorite-icon:hover {
+    transform: translate(2px) scale(1.2);
+}
