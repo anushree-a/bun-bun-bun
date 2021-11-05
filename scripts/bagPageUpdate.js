@@ -64,10 +64,47 @@ const populateBagItems = () => {
     }
 }
 
+const populateFavoritesList = () => {
+    const favoritesList = JSON.parse(window.localStorage.getItem('favorites'))
+
+    const favoritesEl = document.getElementById("favorites-list")
+
+    if (favoritesList.length) {
+        favoritesList.forEach((favoriteItem) => {
+            const favoriteItemParentDivEl = document.createElement("div");
+            favoriteItemParentDivEl.classList.add("favorite-item")
+
+            const favoriteItemImageEl = document.createElement("img");
+            favoriteItemImageEl.classList.add("favorite-item-image")
+            favoriteItemImageEl.src = favoriteItem.image;
+
+            const favoriteItemLinkEl = document.createElement("a");
+            favoriteItemLinkEl.innerHTML = favoriteItem.type;
+            favoriteItemLinkEl.classList.add("favorite-item-link")
+            favoriteItemLinkEl.href = favoriteItem.url
+
+            favoriteItemParentDivEl.appendChild(favoriteItemImageEl);
+            favoriteItemParentDivEl.appendChild(favoriteItemLinkEl);
+
+            favoritesEl.appendChild(favoriteItemParentDivEl)
+        })
+    }
+    else {
+        const noFavoritesMessageEl = document.createElement("p");
+        noFavoritesMessageEl.innerHTML = "No items in favorites yet!"
+        bagContentEl.appendChild(noFavoritesMessageEl)
+    }
+}
+
 // Handles removal of item from bag
 const onRemoveItem = (selectedItem) => {
     const currentBagContent = JSON.parse(window.localStorage.getItem('bagContent'))
     const newBagContent = currentBagContent.filter((item) => item.type !== selectedItem.type)
     window.localStorage.setItem('bagContent', JSON.stringify(newBagContent));
     location.reload();
+}
+
+populatePageContent = () => {
+    populateBagItems();
+    populateFavoritesList();
 }

@@ -2,7 +2,8 @@
 
 .a6-bag-main {
     padding: 2% 14%;
-    width: 70%;
+    width: 100%;
+    display: flex;
 }
 
 .a6-bag-title {
@@ -89,4 +90,24 @@
     font-size: 12px;
     margin: 4px 0;
     cursor: pointer;
+}
+
+.a6-bag-details {
+    width: 70%;
+    padding-right: 160px;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.favorite-item-image {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.favorite-item-link {
+    color: #000;
 }

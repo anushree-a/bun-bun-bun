@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="styles/a5-footer.css">
 </head>
 
-<body onload="populateBagItems()">
+<body onload="populatePageContent()">
     <nav class="a5-navbar">
         <div class="a5-logo">
             <a href="./index.html" class="a5-logo">
@@ -40,17 +40,23 @@
         </div>
     </nav>
     <main class="a6-bag-main">
-        <h1 class="a6-bag-main-title">Selected Items</h1>
-        <p class="a6-bag-oneliner">Items that you added to your bag:</p>
-        <div class="a6-bag-content" id="a6-bag-content">
-            <div class="bun-selections">
+        <div class="a6-bag-details">
+            <h1 class="a6-bag-main-title">Selected Items</h1>
+            <p class="a6-bag-oneliner">Items that you added to your bag:</p>
+            <div class="a6-bag-content" id="a6-bag-content">
+                <div class="bun-selections">
+                </div>
             </div>
+            <div class="total-amount">
+                <h4 class="total-amount-label">Total</h4>
+                <h4 class="total-amount-value" id="total-amount-value"></h4>
+            </div>
+            <div id="proceed-to-payment-btn">Proceed to payment</div>
         </div>
-        <div class="total-amount">
-            <h4 class="total-amount-label">Total</h4>
-            <h4 class="total-amount-value" id="total-amount-value"></h4>
+        <div class="a6-favorites-details">
+            <h3>Your favorites</h3>
+            <div class="favorites-list" id="favorites-list"></div>
         </div>
-        <div id="proceed-to-payment-btn">Proceed to payment</div>
     </main>
     <footer class="a5-footer sticky-footer">
         <div class="a5-socials">
